@@ -30,23 +30,48 @@
 // `;
 // wrapper.innerHTML = list;
 
-//-----------ES6 literal Cloning styled component----------
+//-----------ES6 literal Cloning styled component---------------------------------------------------------------------------------------
 // styled components is package or library for react
 // styled components는 js에서 css를 쓸수 있고 html을 얻을 수 있다.
 // ``를 이용해서 만들어본다.
 
-const styled = (aElement) => {
-  const el = document.createElement(aElement);
-  return el;
-};
+// const styled = (aElement) => {
+//   const el = document.createElement(aElement);
+//   return (args) => {
+//     const styles = args[0];
+//     el.style = styles;
+//     return el;
+//   };
+// };
 
-const title = styled("h1")(`
-  border-radius: 10x;
-  color:blue;
-`);
-console.log(title);
-
-// styled("h1")`
-//   border-radius: 10px;
+// const title = styled("h1")`
+//   background-color: wheat;
 //   color: blue;
 // `;
+
+// const subtitle = styled("span")`
+//   color: green;
+// `;
+
+// title.innerText = "We cloned";
+// subtitle.innerText = "Styled Component";
+
+// document.body.append(title, subtitle);
+
+// ----------- ES6 More String Method ---------------------
+// 1. includes()
+// const isEmail = (email) => email.includes("@");
+
+// console.log(isEmail("lee@naver.com"));
+
+// 2. repeat()
+// const creditCardNumber = "6060";
+
+// const displayName = `${"*".repeat(10)}${creditCardNumber}`;
+
+// console.log(displayName);
+
+// 3. startsWith()  && endsWith()
+const name = "Lee-Tae-Eon";
+
+console.log(name.startsWith("L"));
