@@ -19,14 +19,23 @@
 
 // ES6 Array.find() --------------------------------------
 
-const friends = [
-  "lee@naver.com",
-  "tae@google.com",
-  "eon@gmail.com",
-  "woo@daum.net",
-  "hui@kimchi.net",
-];
+// const friends = [
+//   "lee@naver.com",
+//   "tae@google.com",
+//   "eon@gmail.com",
+//   "woo@daum.net",
+//   "hui@kimchi.net",
+// ];
 
-friends.fill("*".repeat(5), 0, 1);
+// friends.fill("*".repeat(5), 0, 1);
 
-console.log(friends);
+// console.log(friends);
+
+// ------------- Array flat
+const fruits = ["apple", "strawberry", "avocado"];
+
+const sortFruit = (fruitA, fruitB) => {
+  return fruitA.length - fruitB.length;
+};
+
+console.log(fruits.sort(sortFruit));
