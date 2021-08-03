@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .canvas__container {
+        margin: 30px auto;
+        border: 1px solid black;
+      }
+      .select__preference {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+      }
+      #draw__range {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas__container">
+      <canvas class="draw__canvas" id="draw" width="800" height="400"></canvas>
+    </div>
+    <form class="select__preference">
+      <label for="draw__range">굵기를 선택하세요</label>
+      <input
+        id="draw__range"
+        type="range"
+        value="5"
+        min="1"
+        max="70"
+        step="2"
+      />
+      <label for="draw__color" name="pick color">컬러를 선택하세요</label>
+      <input id="draw__color" type="color" value="#000000" />
+      <input type="button" id="del_btn" value="전체삭제" />
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
